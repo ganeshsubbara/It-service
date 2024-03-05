@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[(function () {
+    // Retrieve new hire information (replace with actual data)
+    var employeeName = "John Doe";
+    var onboardingTasks = ["Complete paperwork", "Attend orientation", "Set up workstation"];
+
+    // Dynamically update widget content
+    document.getElementById('employeeName').innerHTML = employeeName;
+    document.getElementById('greeting').innerHTML = getGreeting();
+    updateOnboardingChecklist();
+
+    // Function to get dynamic greeting based on the time of day
+    function getGreeting() {
+        var hour = new Date().getHours();
+        if (hour < 12) return "Good morning!";
+        else if (hour < 18) return "Good afternoon!";
+        else return "Good evening!";
+    }
+
+    // Function to update the onboarding checklist
+    function updateOnboardingChecklist() {
+        var checklist = document.getElementById('onboardingChecklist');
+        onboardingTasks.forEach(function(task) {
+            var listItem = document.createElement('li');
+            listItem.textContent = task;
+            checklist.appendChild(listItem);
+        });
+    }
+})();]]></client_script>
+        <controller_as>c</controller_as>
+        <css>#newHireWelcomeWidget {
+        border: 1px solid #ccc;
+        padding: 20px;
+        text-align: center;
+    }
+
+    img {
+        max-width: 100px;
+        border-radius: 50%;
+        margin: 10px 0;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+h2
+{
+  color:white;
+  background-color:black;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>hire</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Hire</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {  /* populate the 'data' object */  /* e.g., data.table = $sp.getValue('table'); */})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-03-04 15:49:30</sys_created_on>
+        <sys_id>7b0297ec97748210db51f6fce053af94</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Hire</sys_name>
+        <sys_package display_value="It service" source="x_1305260_it_ser_0">792f07e897748210db51f6fce053aff3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="It service">792f07e897748210db51f6fce053aff3</sys_scope>
+        <sys_update_name>sp_widget_7b0297ec97748210db51f6fce053af94</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-03-04 16:53:25</sys_updated_on>
+        <template><![CDATA[<div id="newHireWelcomeWidget">
+    <h2>Welcome To Xyz It service <span id="employeeName"></span></h2>
+  <h6>
+    Explore our services from menu bar
+  </h6>
+    <p id="greeting"></p>
+    <ul id="onboardingChecklist"></ul>
+</div>]]></template>
+    </sp_widget>
+</record_update>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_module">
+    <sys_ui_module action="DELETE">
+        <active>true</active>
+        <application display_value="Notes">71be232497788210db51f6fce053afbd</application>
+        <filter/>
+        <name>Notes</name>
+        <order/>
+        <path/>
+        <path_relative_to_root>false</path_relative_to_root>
+        <roles>x_1305260_it_ser_0.notes_user</roles>
+        <sys_class_name>sys_ui_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-03-04 17:54:42</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>3dbe232497788210db51f6fce053afcc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Notes</sys_name>
+        <sys_package display_value="It service" source="x_1305260_it_ser_0">792f07e897748210db51f6fce053aff3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="It service">792f07e897748210db51f6fce053aff3</sys_scope>
+        <sys_update_name>sys_ui_module_3dbe232497788210db51f6fce053afcc</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-03-04 17:54:42</sys_updated_on>
+        <table>x_1305260_it_ser_0_notes</table>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+    </sys_ui_module>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="It service">792f07e897748210db51f6fce053aff3</application>
+        <file_path/>
+        <instance_id>04285c391bbeb5106a85eb9b2d4bcbd2</instance_id>
+        <instance_name>dev228441</instance_name>
+        <name>sys_ui_module_3dbe232497788210db51f6fce053afcc</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_module"><sys_ui_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="Notes">71be232497788210db51f6fce053afbd</application><filter/><name>Notes</name><order/><path/><path_relative_to_root>false</path_relative_to_root><roles>x_1305260_it_ser_0.notes_user</roles><sys_class_name>sys_ui_module</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-03-04 17:54:42</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>3dbe232497788210db51f6fce053afcc</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Notes</sys_name><sys_package display_value="It service" source="x_1305260_it_ser_0">792f07e897748210db51f6fce053aff3</sys_package><sys_policy/><sys_scope display_value="It service">792f07e897748210db51f6fce053aff3</sys_scope><sys_update_name>sys_ui_module_3dbe232497788210db51f6fce053afcc</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-03-04 17:54:42</sys_updated_on><table>x_1305260_it_ser_0_notes</table><uncancelable>false</uncancelable><view_name/></sys_ui_module></record_update>]]></payload>
+        <payload_hash>157544914</payload_hash>
+        <record_name>Notes</record_name>
+        <reverted_from/>
+        <source>aecf0be897748210db51f6fce053af67</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-03-04 17:54:42</sys_created_on>
+        <sys_id>bdbe232497788210db51f6fce053afcf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18e0a9a83640000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-03-04 17:54:42</sys_updated_on>
+        <type>Module</type>
+        <update_guid>f1be232490788210302c31ee8a16a0cf</update_guid>
+        <update_guid_history>f1be232490788210302c31ee8a16a0cf:157544914</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-03-04 18:07:39</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_module">sys_ui_module</sys_db_object>
+        <sys_id>58c0972c7b2d4444a16f8a2c8b42e790</sys_id>
+        <sys_metadata>3dbe232497788210db51f6fce053afcc</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Notes</sys_name>
+        <sys_package display_value="It service" source="x_1305260_it_ser_0">792f07e897748210db51f6fce053aff3</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="It service">792f07e897748210db51f6fce053aff3</sys_scope>
+        <sys_scope_delete display_value="">465e9d441f534357a7c1055c76bd9e89</sys_scope_delete>
+        <sys_update_name>sys_ui_module_3dbe232497788210db51f6fce053afcc</sys_update_name>
+        <sys_update_version display_value="sys_ui_module_3dbe232497788210db51f6fce053afcc">bdbe232497788210db51f6fce053afcf</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-03-04 18:07:39</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

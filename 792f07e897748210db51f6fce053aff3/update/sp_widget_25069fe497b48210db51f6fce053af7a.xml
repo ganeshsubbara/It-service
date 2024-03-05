@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[// Client-side script for Login Details Widget
+(function () {
+    // Function to submit login details
+    function submitLogin() {
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+
+        // Validate login details (replace with actual authentication logic)
+        if (validateCredentials(username, password)) {
+            document.getElementById('loginStatus').innerHTML = 'Login successful! Redirecting...';
+
+            // Implement redirection logic or further actions here
+        } else {
+            document.getElementById('loginStatus').innerHTML = 'Invalid username or password. Please try again.';
+        }
+    }
+
+    // Function to validate login credentials (replace with actual authentication logic)
+    function validateCredentials(username, password) {
+        // Example: Check against a User table in ServiceNow
+        // This is a basic example and should be enhanced based on your authentication mechanism
+        var userRecord = getUserRecord(username);
+
+        return userRecord && userRecord.password === password;
+    }
+
+    // Example function to retrieve user record from the User table in ServiceNow
+    function getUserRecord(username) {
+        // This is a placeholder function; replace it with your actual ServiceNow API call
+        // Example: Use GlideRecord to query the User table
+        // var userRecord = new GlideRecord('sys_user');
+        // userRecord.addQuery('user_name', username);
+        // userRecord.query();
+        // return userRecord.hasNext() ? userRecord.next() : null;
+
+        // For simplicity, return a hardcoded user record
+        return { user_name: 'demo_user', password: 'demo_password' };
+    }
+})();
+]]></client_script>
+        <controller_as>c</controller_as>
+        <css>/* Styles for Login Details Widget */
+#loginDetailsWidget {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    display: grid;
+    grid-gap: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#loginStatus {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    color: #333;
+    text-align: center;
+}
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>signin</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>signin</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[// Server-side script for Login Details Widget (Script Include)
+var LoginDetailsWidget = Class.create();
+
+LoginDetailsWidget.prototype = Object.extendsObject(AbstractAjaxProcessor, {
+    type: 'LoginDetailsWidget',
+
+    // AJAX function to handle login requests
+    processLogin: function () {
+        var username = this.getParameter('sysparm_username');
+        var password = this.getParameter('sysparm_password');
+        
+        // Validate login details (replace with actual authentication logic)
+        var isValid = this._validateCredentials(username, password);
+
+        return isValid ? 'success' : 'failure';
+    },
+
+    // Example function to validate login credentials (replace with actual authentication logic)
+    _validateCredentials: function (username, password) {
+        // This is a placeholder function; replace it with your actual ServiceNow API call
+        // Example: Use GlideRecord to query the User table
+        // var userRecord = new GlideRecord('sys_user');
+        // userRecord.addQuery('user_name', username);
+        // userRecord.query();
+        // return userRecord.hasNext() ? userRecord.next().password === password : false;
+
+        // For simplicity, validate against a hardcoded user record
+        return username === 'demo_user' && password === 'demo_password';
+    },
+
+    // ...
+});
+]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-03-04 16:06:48</sys_created_on>
+        <sys_id>25069fe497b48210db51f6fce053af7a</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>signin</sys_name>
+        <sys_package display_value="It service" source="x_1305260_it_ser_0">792f07e897748210db51f6fce053aff3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="It service">792f07e897748210db51f6fce053aff3</sys_scope>
+        <sys_update_name>sp_widget_25069fe497b48210db51f6fce053af7a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-03-04 16:07:53</sys_updated_on>
+        <template><![CDATA[<div id="loginDetailsWidget">
+    <h2>Login Details</h2>
+    <form id="loginForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <button type="button" onclick="submitLogin()">Login</button>
+    </form>
+    <div id="loginStatus"></div>
+</div> ]]></template>
+    </sp_widget>
+</record_update>
